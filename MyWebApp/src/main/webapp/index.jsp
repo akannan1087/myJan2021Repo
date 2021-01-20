@@ -3,7 +3,8 @@
   <title>My WebApp</title>
 </head>
 <body>
-<h2> We are implementing webhooks using Jenkins and GitHub!!! </h2>
+<h2> We are doing code quality checks using Sonarqube. 
+	We are starting the build using webhooks in Jenkins and GitHub!!! </h2>
 
 </body>
 </html>
