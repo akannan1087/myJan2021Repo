@@ -3,8 +3,7 @@
   <title>Some relevant title</title>
 </head>
 <body>
-<h2> We are doing code quality checks using Sonarqube. 
-	We are starting the build using webhooks in Jenkins and GitHub!!! </h2>
+<h2> We are migrating apps from GitHub to Azure cloud using Azure DevOps, It is really fun!! </h2>
 
 </body>
 </html>
