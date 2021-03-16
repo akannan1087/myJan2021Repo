@@ -33,7 +33,7 @@ stages:
     - task: Maven@3
       displayName: 'Maven Package'
       inputs:
-        mavenPomFile: 'pom.xml'
+        mavenPomFile: 'MyWebApp/pom.xml'
 
     - task: CopyFiles@2
       displayName: 'Copy Files to artifact staging directory'
