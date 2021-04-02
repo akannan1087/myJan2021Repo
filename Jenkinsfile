@@ -52,27 +52,7 @@ pipeline {
             }
         }
     
-    
-     stage ('DEV Approve') {
-      steps {
-      echo "Taking approval from DEV Manager for QA Deployment"
-        timeout(time: 7, unit: 'DAYS') {
-        input message: 'Do you want to deploy?', submitter: 'admin'
-        }
-      }
-     }
-     stage ('QA Deploy') {
-      steps {
-        echo "deploying to QA Env "
-                deploy adapters: [tomcat9(credentialsId: 'f62d2453-5120-45d3-b5e0-2cdf5e3fb381', path: '', url: 'http://ec2-18-191-161-113.us-east-2.compute.amazonaws.com:8080')], contextPath: null, war: '**/*.war'
-        }
-    }
-    
-        stage ('Slack QA notify') {
-            steps {
-            slackSend channel: 'mar-2021-weekday-batch', message: 'QA Deployment was successful, please start your QA testing'
-            }
-        }
+
          
       }
 }
