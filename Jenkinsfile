@@ -51,16 +51,16 @@ pipeline {
             slackSend channel: 'mar-2021-weekday-batch', message: 'DEV Deployment was successful, please start smoke testing'
             }
         }
-    }
     
-      stage ('DEV Approve') {
+    
+     stage ('DEV Approve') {
       steps {
       echo "Taking approval from DEV Manager for QA Deployment"
         timeout(time: 7, unit: 'DAYS') {
         input message: 'Do you want to deploy?', submitter: 'admin'
         }
       }
-    
+     }
      stage ('QA Deploy') {
       steps {
         echo "deploying to QA Env "
@@ -73,5 +73,6 @@ pipeline {
             slackSend channel: 'mar-2021-weekday-batch', message: 'QA Deployment was successful, please start your QA testing'
             }
         }
+         
       }
 }
