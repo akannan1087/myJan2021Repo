@@ -60,7 +60,7 @@ pipeline {
         input message: 'Do you want to deploy?', submitter: 'admin'
         }
       }
-    }
+    
      stage ('QA Deploy') {
       steps {
         echo "deploying to QA Env "
@@ -73,5 +73,5 @@ pipeline {
             slackSend channel: 'mar-2021-weekday-batch', message: 'QA Deployment was successful, please start your QA testing'
             }
         }
-
+      }
 }
