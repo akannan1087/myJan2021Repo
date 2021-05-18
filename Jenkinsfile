@@ -26,7 +26,7 @@ pipeline {
       }
     }
     
-            stage ('Code Quality') {
+            stage ('Nexus upload') {
                 steps {
                     
                 }
